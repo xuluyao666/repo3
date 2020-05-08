@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function a() {
+            var a=document.getElementById("all")
+            var b=document.getElementsByClassName("pro");
+            var p =0;
+             for(var i=0;i<b.length;i++){
+                b[i].checked=a.checked;
+                p++;
+                if(p>3){
+                    b[i].checked=false
+                }
+
+            }
+
+        }
+
+        function b() {
+
+            var b=document.getElementsByClassName("pro");
+            for(i=0;i<b.length;i++){
+                b[i].checked=!b[i].checked;
+
+
+            }
+        }
+
+        function c() {
+            var b=document.getElementsByClassName("pro");
+            var p =0;
+            for(var i=0;i<b.length;i++){
+                if(b[i].checked){
+                    p++;
+                }
+                if(p>3){
+                    b[i].checked=false;
+                }
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="all" onchange="a()">全选
+    <input type="checkbox" id="all0" onchange="b()">反选<br>
+    <hr>
+    <input type="checkbox" class="pro" onchange="c(this)"/>html<br>
+    <input type="checkbox" class="pro" onchange="c(this)"/>js<br>
+    <input type="checkbox" class="pro" onchange="c(this)"/>css<br>
+    <input type="checkbox" class="pro" onchange="c(this)"/>java<br>
+
+</body>
+</html>
